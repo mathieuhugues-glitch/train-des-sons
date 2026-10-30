@@ -23,3 +23,14 @@ Le drapeau en haut à droite change de langue à tout moment ; 🎵 coupe les br
 
 ## Conseil iPad
 Pour une voix suédoise de bonne qualité : Réglages → Accessibilité → Contenu énoncé → Voix → Suédois, télécharger une voix « améliorée » (même chose pour le français). Un 🔇? sur l'écran d'accueil signale qu'aucune voix n'a été trouvée pour la langue.
+
+## Nouveautés (v2)
+
+- **abc / ABC** : sur l'écran d'accueil, un gros interrupteur choisit minuscules ou MAJUSCULES (mémorisé). Le bouton rond en haut à droite du jeu bascule aussi en cours de partie. Accents et digrammes suivent (é→É, å→Å, ch→CH).
+- **Écran d'accueil** : drapeau = langue, abc/ABC = casse, puis deux gros boutons de jeu : 🚂 *Le train des sons* et **Aa** *Les paires de lettres*, chacun avec ses niveaux (étoiles).
+- **Les paires de lettres** : la locomotive tire une lettre (dans la casse choisie) ; il faut accrocher la même lettre dans l'autre casse parmi 3–4 wagons. La lettre est prononcée. 10 paires par partie, même gare d'arrivée à la fin.
+  - ⭐ : lettres qui se ressemblent en grand et en petit (c o s v w x z k p u), 3 wagons.
+  - ⭐⭐ : tout l'alphabet a–z, 4 wagons.
+  - ⭐⭐⭐ : lettres pièges (b/d/p/q, n/u/m/h, i/l/j/t, a/e/o, g/q/y, f/t) + é (FR) ou å ä ö (SV).
+  - 🔀 : tout mélangé, la lettre montrée est tantôt petite, tantôt grande (seulement depuis le choix de niveau).
+- Tests : `tools/e2e.cjs` (bascule ABC, une partie train en français, une partie paires en suédois).

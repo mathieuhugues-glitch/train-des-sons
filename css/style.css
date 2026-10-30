@@ -103,3 +103,24 @@ button { font-family: inherit; font-weight: 800; border: 0; cursor: pointer; col
 .stars { font-size: clamp(30px, 7vmin, 72px); letter-spacing: .5vmin; text-align: center; min-height: 1.2em; }
 .stars span { display: inline-block; animation: pop .45s ease-out both; }
 .endbtns { display: flex; gap: 5vmin; }
+/* v2: options, modes, letter case */
+.opts { display: flex; gap: 4vmin; align-items: center; flex-wrap: wrap; justify-content: center; }
+.seg { display: flex; background: rgba(255,255,255,.55); border-radius: 4vmin; padding: .8vmin; gap: .8vmin; }
+.seg button { min-width: clamp(64px, 13vmin, 140px); height: clamp(56px, 10vmin, 100px); border-radius: 3vmin; font-size: clamp(28px, 6vmin, 60px); opacity: .45; }
+.seg button.on { background: #fff; opacity: 1; box-shadow: 0 .6vmin 0 rgba(0,0,0,.12); }
+.seg.case button { font-family: 'Rubik', sans-serif; color: #3b2f6b; font-size: clamp(26px, 5.5vmin, 56px); }
+.novoice { position: static; }
+.modes { display: flex; gap: 6vmin; flex-wrap: wrap; justify-content: center; }
+.mcard { display: flex; flex-direction: column; align-items: center; gap: 1.5vmin; }
+.modebtn { background: #fff; border-radius: 5vmin; width: clamp(150px, 36vmin, 380px); height: clamp(120px, 27vmin, 290px); box-shadow: 0 1.2vmin 0 rgba(0,0,0,.1); display: flex; align-items: center; justify-content: center; gap: 1vmin; }
+.modebtn:active { transform: scale(.96); }
+.mico svg { width: clamp(90px, 20vmin, 220px); height: auto; display: block; animation: chugga .6s ease-in-out infinite alternate; }
+.mwag { font-size: clamp(36px, 8vmin, 90px); }
+.mico.aa { font-family: 'Rubik', sans-serif; font-size: clamp(70px, 17vmin, 190px); color: #4cc9f0; line-height: 1; }
+.mico.aa::first-letter { color: #ff6b6b; }
+.casebtn { font-family: 'Rubik', sans-serif !important; font-size: clamp(18px, 3.6vmin, 34px) !important; color: #3b2f6b; }
+.pic.letter { font-family: 'Rubik', sans-serif; color: #3b2f6b; min-width: 1.4em; padding: 0 5vmin; }
+.wagon .lt { font-family: 'Rubik', 'Arial Rounded MT Bold', sans-serif; }
+body.upper .wagon .lt, .wagon[data-case="u"] .lt { letter-spacing: 0; }
+.wagon[data-case="l"] .lt { letter-spacing: -1px; }
+.endtrain .wagon .lt.txt { font-family: 'Rubik', sans-serif; font-size: calc(var(--s) * .4); color: #3b2f6b; }

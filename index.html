@@ -15,18 +15,14 @@
 <body>
 <section id="start" class="screen">
   <h1 class="title" id="title">Le train <span class="b">des sons</span></h1>
-  <div class="loco-hero" id="hero"></div>
-  <div class="langs">
-    <div class="lcard" data-lang="fr">
-      <button class="flagbtn" data-go="fr" aria-label="Français"><span class="flag">🇫🇷</span><span class="lname">Français</span></button>
-      <div class="lv" data-lang="fr"></div>
-      <div class="novoice hidden" data-lang="fr" title="Pas de voix française sur cet appareil">🔇?</div>
-    </div>
-    <div class="lcard" data-lang="sv">
-      <button class="flagbtn" data-go="sv" aria-label="Svenska"><span class="flag">🇸🇪</span><span class="lname">Svenska</span></button>
-      <div class="lv" data-lang="sv"></div>
-      <div class="novoice hidden" data-lang="sv" title="Ingen svensk röst på den här enheten">🔇?</div>
-    </div>
+  <div class="opts">
+    <div class="seg" id="langSeg"><button data-lang="fr" aria-label="Français">🇫🇷</button><button data-lang="sv" aria-label="Svenska">🇸🇪</button></div>
+    <div class="seg case" id="caseSeg"><button data-case="l" aria-label="minuscules">abc</button><button data-case="u" aria-label="MAJUSCULES">ABC</button></div>
+    <div class="novoice hidden" id="novoice" title="Pas de voix pour cette langue sur cet appareil">🔇?</div>
+  </div>
+  <div class="modes">
+    <div class="mcard"><button class="modebtn" data-mode="train" aria-label="Le train des sons"><span class="mico" id="trainIco"></span><span class="mwag">🐱</span></button><div class="lv" data-mode="train"></div></div>
+    <div class="mcard"><button class="modebtn" data-mode="pairs" aria-label="Les paires de lettres"><span class="mico aa">Aa</span></button><div class="lv" data-mode="pairs"></div></div>
   </div>
 </section>
 
@@ -34,7 +30,7 @@
   <div class="topbar">
     <button class="round" id="home" aria-label="Accueil">🏠</button>
     <div class="dots" id="dots"></div>
-    <div class="tr"><button class="round" id="swap" aria-label="Langue"></button><button class="round" id="mute" aria-label="Son"></button></div>
+    <div class="tr"><button class="round casebtn" id="caseBtn" aria-label="abc / ABC">abc</button><button class="round" id="swap" aria-label="Langue"></button><button class="round" id="mute" aria-label="Son"></button></div>
   </div>
   <div class="picrow">
     <button class="pic" id="pic" aria-label="Écouter"></button>
@@ -57,6 +53,7 @@
 </section>
 
 <script src="js/words.js"></script>
+<script src="js/pairs.js"></script>
 <script src="js/sound.js"></script>
 <script src="js/voice.js"></script>
 <script src="js/game.js"></script>

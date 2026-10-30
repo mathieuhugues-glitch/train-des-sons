@@ -1,6 +1,6 @@
 /* Le train des sons - offline cache (cache first, refreshed in background) */
-const C = 'tds-v1';
-const FILES = ['./', 'index.html', 'manifest.webmanifest', 'css/style.css', 'css/fonts.css', 'js/words.js', 'js/sound.js', 'js/voice.js', 'js/game.js',
+const C = 'tds-v2';
+const FILES = ['./', 'index.html', 'manifest.webmanifest', 'css/style.css', 'css/fonts.css', 'js/words.js', 'js/pairs.js', 'js/sound.js', 'js/voice.js', 'js/game.js',
   'icons/icon.svg', 'icons/icon-180.png', 'icons/icon-192.png', 'icons/icon-512.png',
   'fonts/rubik-latin-700-normal.woff2', 'fonts/rubik-latin-800-normal.woff2', 'fonts/rubik-latin-ext-700-normal.woff2', 'fonts/rubik-latin-ext-800-normal.woff2'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(C).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
