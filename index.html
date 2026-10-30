@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Train des sons">
+<meta name="theme-color" content="#bde0fe">
+<title>Le train des sons · Ljudtåget</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<section id="start" class="screen">
+  <h1 class="title" id="title">Le train <span class="b">des sons</span></h1>
+  <div class="loco-hero" id="hero"></div>
+  <div class="langs">
+    <div class="lcard" data-lang="fr">
+      <button class="flagbtn" data-go="fr" aria-label="Français"><span class="flag">🇫🇷</span><span class="lname">Français</span></button>
+      <div class="lv" data-lang="fr"></div>
+      <div class="novoice hidden" data-lang="fr" title="Pas de voix française sur cet appareil">🔇?</div>
+    </div>
+    <div class="lcard" data-lang="sv">
+      <button class="flagbtn" data-go="sv" aria-label="Svenska"><span class="flag">🇸🇪</span><span class="lname">Svenska</span></button>
+      <div class="lv" data-lang="sv"></div>
+      <div class="novoice hidden" data-lang="sv" title="Ingen svensk röst på den här enheten">🔇?</div>
+    </div>
+  </div>
+</section>
+
+<section id="game" class="screen hidden">
+  <div class="topbar">
+    <button class="round" id="home" aria-label="Accueil">🏠</button>
+    <div class="dots" id="dots"></div>
+    <div class="tr"><button class="round" id="swap" aria-label="Langue"></button><button class="round" id="mute" aria-label="Son"></button></div>
+  </div>
+  <div class="picrow">
+    <button class="pic" id="pic" aria-label="Écouter"></button>
+    <button class="round big" id="replay" aria-label="Écouter">🔊</button>
+  </div>
+  <div class="track"><div class="train" id="train"></div><div class="rails"></div></div>
+  <div class="tray" id="tray"></div>
+  <div class="fx" id="fx"></div>
+  <div class="lvlup hidden" id="lvlup"></div>
+</section>
+
+<section id="end" class="screen hidden">
+  <div class="station">
+    <div class="roof">🚉</div>
+    <div class="endtrain" id="endtrain"></div>
+    <div class="rails"></div>
+  </div>
+  <div class="stars" id="endStars"></div>
+  <div class="endbtns"><button class="bigbtn green" id="again" aria-label="Rejouer">🔁</button><button class="bigbtn blue" id="home2" aria-label="Accueil">🏠</button></div>
+</section>
+
+<script src="js/words.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/game.js"></script>
+<script>if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});</script>
+</body>
+</html>
